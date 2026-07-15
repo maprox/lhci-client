@@ -41,10 +41,11 @@ RUN npm install \
 RUN groupadd --system lhci \
  && useradd --system --create-home --gid lhci lhci \
  && mkdir -p /home/lhci/reports \
+ && cd /home/lhci/reports \
+ && npm link puppeteer \
  && chown -R lhci:lhci /home/lhci
 
 USER lhci
 WORKDIR /home/lhci/reports
-RUN npm link puppeteer
 
 CMD ["lhci", "--help"]
