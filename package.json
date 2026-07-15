@@ -1,0 +1,12 @@
+{
+  "name": "maprox-lhci-client",
+  "version": "0.15.1-lh13.4.0",
+  "private": true,
+  "description": "LHCI client (@lhci/cli@0.15.1) with forced lighthouse@13.4.0",
+  "dependencies": {
+    "@lhci/cli": "0.15.1"
+  },
+  "overrides": {
+    "lighthouse": "13.4.0"
+  }
+}
